@@ -38,6 +38,7 @@ namespace APPMVC.NET.Controllers
         {
             return View();
         }
+        [AcceptVerbs("POST","GET")]
         public IActionResult ViewProduct(int? id)
         {
             var product = _productService.Where(p => p.Id == id).FirstOrDefault();
